@@ -20,3 +20,30 @@ cn.zain.mr.flow
     格式 ip  上行 下行  状态
         192.168.12.22  120 23 200
     pom中修改main为cn.zain.mr.flow
+
+a.txt   
+    hello tom
+    hello jim
+    hello kitty
+b.txt
+    java scala
+    java python c++
+c.txt
+    hello tom
+    hello kitty
+统计 hello a.txt>3 c.txt>2
+    tom a.txt>1 c.txt>1
+    ....
+思路：
+    以《单词》+《文件名》作为key value：1
+    reduce 《单词》+《文件名》：1
+    结果：hello-a.txt 3
+         hello-c.txt  2
+    
+    map
+    hello :a.txt 3
+    hello :c.txt 3
+    
+    reduce
+    hadoop jar indexStepOne.jar 3 /data/index/input /data/index/output1
+    hadoop jar IndexStepTwo.jar 1 /data/index/output1 /data/index/output2

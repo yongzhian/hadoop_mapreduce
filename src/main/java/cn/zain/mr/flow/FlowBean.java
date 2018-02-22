@@ -14,6 +14,7 @@ public class FlowBean implements Writable{
     private long upFlow;
     private long downFlow;
     private long sumFlow;
+    private String ip;
 
     /**
      * hadoop反序列化时一定需要无参构成
@@ -27,16 +28,19 @@ public class FlowBean implements Writable{
         this.sumFlow = upFlow + downFlow;
     }
 
+    //write和readFields
     public void write(DataOutput dataOutput) throws IOException {
         dataOutput.writeLong(upFlow);
         dataOutput.writeLong(downFlow);
         dataOutput.writeLong(sumFlow);
+        dataOutput.writeUTF(ip);
     }
 
     public void readFields(DataInput dataInput) throws IOException {
         this.upFlow = dataInput.readLong();
         this.downFlow = dataInput.readLong();
         this.sumFlow = dataInput.readLong();
+        this.ip = dataInput.readUTF();
     }
 
     @Override
@@ -70,5 +74,13 @@ public class FlowBean implements Writable{
 
     public void setSumFlow(long sumFlow) {
         this.sumFlow = sumFlow;
+    }
+
+    public String getIp() {
+        return ip;
+    }
+
+    public void setIp(String ip) {
+        this.ip = ip;
     }
 }

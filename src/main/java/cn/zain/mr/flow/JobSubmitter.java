@@ -46,7 +46,9 @@ public class JobSubmitter {
 //        FileOutputFormat.setOutputPath(job,new Path("/data/wc/output"));
         FileOutputFormat.setOutputPath(job,new Path(args[2]));
 
-        job.setNumReduceTasks(Integer.parseInt(args[0]));
+        job.setPartitionerClass(ProvincePartitioner.class);//自定义reduce规则，分发相应的key到不同机器
+//        job.setNumReduceTasks(Integer.parseInt(args[0]));
+        job.setNumReduceTasks(ProvincePartitioner.provinceCode.size());//如果只有1个task则不分区，如果task小于分发数则出错，大于分发数则大于部分为空
 
         boolean waitForCompletion = job.waitForCompletion(true);//集群在客户端打印进度
 

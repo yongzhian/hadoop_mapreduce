@@ -44,7 +44,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>cn.zain.mr.count.JobSubmitter</mainClass>
+                            <mainClass>cn.zain.mr.index.IndexStepTwo</mainClass>
                         </manifest>
                     </archive>
                     <descriptors>
