@@ -62,3 +62,6 @@ D:\software_dev\JetBrains\IDEA2016.1.3_workspace_git\mapreduce\doc\localcount\ha
 3：添加环境变量HADOOP_HOME，指向hadoop目录
 4：将%HADOOP_HOME%\bin加入到path里面
 5：重启myeclipse或者eclipse
+
+#####cn.zain.mr.localuserrating
+    只返回topn，内部传入参数
