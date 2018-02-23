@@ -64,4 +64,38 @@ D:\software_dev\JetBrains\IDEA2016.1.3_workspace_git\mapreduce\doc\localcount\ha
 5：重启myeclipse或者eclipse
 
 #####cn.zain.mr.localuserrating
-    只返回topn，内部传入参数
+    只返回topn，内部传入参数，返回用户评分最高的结果
+
+#####package cn.zain.mr.localfriends 
+    共同好友
+A:B,C,D
+B:A,F,H
+C:D,B,T
+F:G,H,A,B
+D:G,H,A,B
+
+step1结果
+B-D	A
+B-F	A
+D-F	A
+A-C	B
+A-D	B
+A-F	B
+C-D	B
+C-F	B
+D-F	B
+A-C	D
+D-F	G
+B-D	H
+B-F	H
+D-F	H
+
+step2结果
+A-C	D,B
+A-D	B
+A-F	B
+B-D	H,A
+B-F	H,A
+C-D	B
+C-F	B
+D-F	B,A,G,H
