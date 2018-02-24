@@ -64,7 +64,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>cn.zain.mr.index.IndexStepTwo</mainClass>
+                            <mainClass>cn.zain.mr.join.JoinSubmitterByMap</mainClass>
                         </manifest>
                     </archive>
                     <descriptors>

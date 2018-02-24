@@ -99,3 +99,6 @@ B-F	H,A
 C-D	B
 C-F	B
 D-F	B,A,G,H
+
+#####package cn.zain.mr.join
+关联查询通过mapreduce和map 2种方式

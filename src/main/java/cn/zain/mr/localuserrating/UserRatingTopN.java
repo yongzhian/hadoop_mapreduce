@@ -50,8 +50,6 @@ public class UserRatingTopN {
 
         job.setNumReduceTasks(Integer.parseInt(args[0]));
 
-
-
         boolean waitForCompletion = job.waitForCompletion(true);//集群在客户端打印进度
 
         System.exit(waitForCompletion ? 0 : 1); //shell脚本用
