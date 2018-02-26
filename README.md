@@ -102,3 +102,7 @@ D-F	B,A,G,H
 
 #####package cn.zain.mr.join
 关联查询通过mapreduce和map 2种方式
+
+#####cn.zain.mr.efficientuserrating
+高效topn的查询
+带自定义写文件

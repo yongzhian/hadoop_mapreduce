@@ -64,7 +64,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>cn.zain.mr.join.JoinSubmitterByMap</mainClass>
+                            <mainClass>cn.zain.mr.efficientuserrating.UserRatingTopN</mainClass>
                         </manifest>
                     </archive>
                     <descriptors>
