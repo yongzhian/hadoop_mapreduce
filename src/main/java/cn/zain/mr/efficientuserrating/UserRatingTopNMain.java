@@ -20,7 +20,7 @@ import java.util.HashMap;
 /**
  * Created by yongz on 2018/2/25.
  */
-public class UserRatingTopN {
+public class UserRatingTopNMain {
     static ObjectMapper objectMapper = new ObjectMapper();
     Text t = new Text();
 
@@ -64,7 +64,7 @@ public class UserRatingTopN {
     }
 
 
-    private static Logger logger = Logger.getLogger(UserRatingTopN.class);
+    private static Logger logger = Logger.getLogger(UserRatingTopNMain.class);
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
         logger.info("启动方式：hadoop jar xx.jar 3 /home/zain/input /honme/zain/output");
@@ -73,7 +73,7 @@ public class UserRatingTopN {
         conf.addResource("userconf.xml");
 
         Job job = Job.getInstance(conf);
-        job.setJarByClass(UserRatingTopN.class);
+        job.setJarByClass(UserRatingTopNMain.class);
 
         job.setMapperClass(UserRatingTopNMapper.class);
         job.setReducerClass(UserRatingTopNReducer.class);
